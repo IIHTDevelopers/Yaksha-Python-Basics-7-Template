@@ -17,7 +17,7 @@ def display_upcoming_events():
     Returns:
         list: A list of upcoming events
     """
-    # This will fail the test since it doesn't return a list
+   
     return None
 
 def count_total_events():
@@ -26,7 +26,7 @@ def count_total_events():
     Returns:
         int: The total number of events
     """
-    # This will fail the test since it doesn't return the correct count
+   
     return None
 
 def longest_event_duration():
@@ -35,7 +35,7 @@ def longest_event_duration():
     Returns:
         tuple: A tuple containing (event_name, duration_in_days)
     """
-    # This will fail the test since it doesn't return a tuple
+    
     return None
 
 if __name__ == "__main__":
