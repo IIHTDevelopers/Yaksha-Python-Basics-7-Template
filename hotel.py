@@ -6,10 +6,6 @@ from datetime import datetime, timedelta
 def jacuzzi_room_price():
     pass
 
-# TODO: Implement function to calculate total revenue
-def calculate_total_revenue():
-    pass
-
 # TODO: Implement function to find the most expensive room
 def most_expensive_room():
     pass
