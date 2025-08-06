@@ -1,55 +1,59 @@
-import os
+import pandas as pd
 
-# Dataset: Membership details stored in a text file
-FILENAME = "membership_data.txt"
+# ✅ Sample Dataset (Do Not Modify)
+membership_data = pd.DataFrame({
+    "Member ID": [101, 102, 103, 104, 105],
+    "Name": ["Alice", "Bob", "Charlie", "Diana", "Ethan"],
+    "Membership Type": ["Gold", "Silver", "Gold", "Bronze", "Silver"],
+    "Monthly Fee": [1500, 1000, 1500, 800, 1000],
+    "Months Active": [12, 8, 6, 3, 10]
+})
 
-
-def create_membership_file():
+#  Function 1: Calculate total contribution of a member
+def calculate_total_contribution(df, member_id):
     """
-    TODO: Create a sample membership data file.
-    Each record includes: Name, Plan, Start Date, End Date, Payment Status.
+    Return the total contribution made by a member using Monthly Fee × Months Active.
+
+    Parameters:
+        df (pd.DataFrame): Membership dataset.
+        member_id (int): Member ID.
+
+    Returns:
+        int: Total contribution.
     """
-    data = """John, Gold, 2024-01-15, 2025-01-15, Paid
-Alice, Silver, 2024-02-01, 2025-02-01, Unpaid
-Bob, Platinum, 2024-03-10, 2025-03-10, Paid
-Emma, Gold, 2024-04-20, 2025-04-20, Paid
-Mike, Silver, 2024-05-05, 2025-05-05, Unpaid"""
+    # TODO: Implement arithmetic logic to return total contribution
+    pass
 
-    pass  # Replace with file-writing logic
-
-
-def check_membership_status():
+#  Function 2: Count members per membership type
+def count_members_per_type(df):
     """
-    TODO: Read the file and check active members (those who have 'Paid' status).
-    Store active members in a dictionary with details (Plan, End Date).
-    Display the list of active members.
+    Returns a dictionary with the count of members in each membership type using a loop.
+
+    Parameters:
+        df (pd.DataFrame): Membership dataset.
+
+    Returns:
+        dict: Count of members per membership type.
     """
-    active_members = {}  # Dictionary to store active members
+    # TODO: Use loop to count each membership type
+    pass
 
-    pass  # Replace with file-reading logic
-
-
-def count_members_by_plan():
+#  Function 3: Check if Alice is a long-term member
+def is_alice_long_term(df):
     """
-    TODO: Count how many members are in each plan (Gold, Silver, Platinum).
-    Display the distribution of members across different membership plans.
+    Returns True if Alice has been active for more than 12 months.
+
+    Parameters:
+        df (pd.DataFrame): Membership dataset.
+
+    Returns:
+        bool: True if Alice > 12 months, else False.
     """
-    plan_counts = {"Gold": 0, "Silver": 0, "Platinum": 0}
+    # TODO: Implement conditional logic to check Alice's active months
+    pass
 
-    pass  # Replace with logic to count members per plan
-
-    return plan_counts
-
-
-def main():
-    """
-    TODO: Execute all functions and display results.
-    - Create membership file (if not exists)
-    - Check and display active memberships
-    - Count and display members by plan
-    """
-    pass  # Replace with function calls
-
-
+#  Sample Execution
 if __name__ == "__main__":
-    main()
+    print("Total Contribution by Member 101:", calculate_total_contribution(membership_data, 101))
+    print("Count of Members Per Type:", count_members_per_type(membership_data))
+    print("Is Alice a long-term member (>12 months)?", is_alice_long_term(membership_data))
