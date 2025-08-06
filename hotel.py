@@ -1,40 +1,43 @@
-import numpy as np
 import pandas as pd
-from datetime import datetime, timedelta
 
-# TODO: Implement function to get the price of the room with a Jacuzzi
-def jacuzzi_room_price():
+#  Dataset (Do Not Modify)
+hotel_data = pd.DataFrame({
+    "Hotel ID": [1, 2, 3, 4, 5],
+    "Hotel Name": ["Grand Stay", "Comfort Inn", "Luxury Palace", "Budget Lodge", "Ocean View"],
+    "Rating": [4.5, 3.8, 4.9, 3.2, 4.3],
+    "Price Per Night": [2500, 1800, 4000, 1200, 3200]
+})
+
+#  Function 1 - Filter hotels by minimum rating
+def filter_hotels_by_rating(df, min_rating):
+    """
+    Filters and returns hotels with rating greater than or equal to min_rating.
+
+    Parameters:
+        df (pd.DataFrame): Hotel dataset.
+        min_rating (float): Rating threshold.
+
+    Returns:
+        pd.DataFrame: Filtered dataset.
+    """
+    # TODO: Implement filtering logic using DataFrame
     pass
 
-# TODO: Implement function to find the most expensive room
-def most_expensive_room():
+#  Function 2 - Calculate average price per night
+def get_average_price(df):
+    """
+    Calculates the average price per night from the hotel dataset.
+
+    Parameters:
+        df (pd.DataFrame): Hotel dataset.
+
+    Returns:
+        float: Rounded average price.
+    """
+    # TODO: Implement logic to calculate average of 'Price Per Night'
     pass
 
-# Helper function: Returns room data
-def get_room_data():
-    return {
-        "R101": {"type": "Standard", "price": 100.00, "capacity": 2, "amenities": ["TV", "WiFi"]},
-        "R102": {"type": "Deluxe", "price": 150.00, "capacity": 2, "amenities": ["TV", "WiFi", "Mini Bar"]},
-        "R103": {"type": "Suite", "price": 250.00, "capacity": 4, "amenities": ["TV", "WiFi", "Mini Bar", "Jacuzzi"]},
-        "R104": {"type": "Standard", "price": 100.00, "capacity": 2, "amenities": ["TV", "WiFi"]},
-        "R105": {"type": "Deluxe", "price": 150.00, "capacity": 2, "amenities": ["TV", "WiFi", "Mini Bar"]}
-    }
-
-# Helper function: Returns booking data
-def get_booking_data():
-    today = datetime.now()
-    return [
-        {"booking_id": "B001", "room_id": "R102", "guest_name": "John Smith", "check_in": today - timedelta(days=2), "check_out": today + timedelta(days=3), "guests": 2},
-        {"booking_id": "B002", "room_id": "R105", "guest_name": "Alice Johnson", "check_in": today + timedelta(days=5), "check_out": today + timedelta(days=10), "guests": 2},
-        {"booking_id": "B003", "room_id": "R103", "guest_name": "Bob Williams", "check_in": today + timedelta(days=15), "check_out": today + timedelta(days=20), "guests": 3},
-        {"booking_id": "B004", "room_id": "R101", "guest_name": "Emma Davis", "check_in": today + timedelta(days=7), "check_out": today + timedelta(days=9), "guests": 1},
-        {"booking_id": "B005", "room_id": "R104", "guest_name": "Michael Brown", "check_in": today + timedelta(days=12), "check_out": today + timedelta(days=14), "guests": 2}
-    ]
-
-# Main Execution
-def main():
-    # TODO: Call functions to execute the program
-    pass
-
+#  Sample Execution Block
 if __name__ == "__main__":
-    main()
+    print("Hotels with Rating >= 4.0:\n", filter_hotels_by_rating(hotel_data, 4.0))
+    print("Average Price Per Night:", get_average_price(hotel_data))
