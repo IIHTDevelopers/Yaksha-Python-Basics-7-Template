@@ -9,7 +9,7 @@ membership_data = pd.DataFrame({
     "Months Active": [12, 8, 6, 3, 10]
 })
 
-#  Function 1: Calculate total contribution of a member
+#  Function 1: Calculate total contribution of 101 member
 def calculate_total_contribution(df, member_id):
     """
     Return the total contribution made by a member using Monthly Fee × Months Active.
@@ -57,3 +57,4 @@ if __name__ == "__main__":
     print("Total Contribution by Member 101:", calculate_total_contribution(membership_data, 101))
     print("Count of Members Per Type:", count_members_per_type(membership_data))
     print("Is Alice a long-term member (>12 months)?", is_alice_long_term(membership_data))
+
